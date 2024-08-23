@@ -1,6 +1,6 @@
 package com.example.eventmanagement.Controller;
 
-import com.example.eventmanagement.service.NotificationService;
+import com.example.eventmanagement.Service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
