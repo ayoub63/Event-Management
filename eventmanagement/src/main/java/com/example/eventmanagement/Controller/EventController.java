@@ -7,7 +7,7 @@ import jakarta.validation.Valid;
 
 import com.example.eventmanagement.Service.EventService;
 import com.example.eventmanagement.Model.Event;
-import com.example.eventmanagement.DTO.EventDTO;
+import com.example.eventmanagement.dto.EventDTO;
 import com.example.eventmanagement.exception.ResourceNotFoundException;
 
 import java.util.List;
