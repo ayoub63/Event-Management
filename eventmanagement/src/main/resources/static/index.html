@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event-Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+  <header>
+      <div class="logo">EventManager</div>
+      <ul>
+        <li><a href="#home">Startseite</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Willkommen beim Event-Manager</h1>
+    <p>Organisiere und plane deine Events ganz einfach an einem Ort!</p>
+    <a href="#events" class="btn">Jetzt entdecken</a>
+  </section>
+
+  <section id="events" class="events">
+    <h2>Unsere Events</h2>
+    
+    <div class="filters">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Nach Events suchen...">
+        </div>
+        
+        <div class="filter-options">
+            <select id="categoryFilter">
+                <option value="">Alle Kategorien</option>
+                <option value="MUSIC">Musik</option>
+                <option value="TECH">Technologie</option>
+                <option value="ARTS">Kunst</option>
+                <option value="SPORTS">Sport</option>
+            </select>
+            
+            <select id="dateFilter">
+                <option value="">Beliebiges Datum</option>
+                <option value="TODAY">Heute</option>
+                <option value="THIS_WEEK">Diese Woche</option>
+                <option value="THIS_MONTH">Dieser Monat</option>
+            </select>
+            
+            <select id="priceFilter">
+                <option value="">Alle Preise</option>
+                <option value="FREE">Kostenlos</option>
+                <option value="PAID">Kostenpflichtig</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="events-container" class="events">
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <p id="modal-date"></p>
+    </div>
+  </div>
+  
+
+  <section id="register">
+    <h2>Event Registrierung</h2>
+    <form id="registrationForm" action="/register" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+  
+      <label for="email">E-Mail:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="event">Event auswählen:</label>
+      <select id="event" name="event" required>
+        <option value="">Bitte wählen</option>
+        <option value="event1">Musikfestival</option>
+        <option value="event2">Technologie-Konferenz</option>
+        <option value="event3">Kunst-Ausstellung</option>
+        <option value="event4">Game Convention</option>
+        <option value="event5">Wissenschaftsaustellung</option>
+      </select>
+  
+      <button type="submit">Registrieren</button>
+    </form>
+  </section>
+
+  <section id="about" class="about">
+    <h2>Über uns</h2>
+    <p>Wir sind ein engagiertes Team von erfahrenen Event-Experten, die es sich zur Aufgabe gemacht haben, das Event-Management auf ein neues Level zu bringen. Unsere Mission ist es, die Organisation, Planung und Durchführung von Veranstaltungen für unsere Kunden so einfach und effizient wie möglich zu gestalten. Wir glauben daran, dass Events Menschen zusammenbringen, Erinnerungen schaffen und Geschichten erzählen. Vertrauen Sie uns, Ihre Veranstaltung in die Hände von Experten zu legen, die Ihre Begeisterung teilen und alles dafür tun, dass Ihr Event ein voller Erfolg wird.
+
+      Lassen Sie uns gemeinsam großartige Momente schaffen – wir freuen uns darauf, Teil Ihrer Geschichte zu sein!</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Kontakt</h2>
+    <form>
+      <input type="text" placeholder="Dein Name" required>
+      <input type="email" placeholder="Deine E-Mail" required>
+      <textarea placeholder="Deine Nachricht" required></textarea>
+      <button type="submit" class="btn">Senden</button>
+    </form>
+  </section>
+  <footer class="footer">
+    <a href="/impressum">Impressum</a>
+    <a href="/agb">AGB</a>
+    <a href="/datenschutz">Datenschutz</a>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
